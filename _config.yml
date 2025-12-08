@@ -1,0 +1,16 @@
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@latest"
+plugins:
+  - jekyll-include-cache
+
+# Thông tin site
+title: "Duplication Text"
+description: "Detect duplicate text using Hashing & Embedding"
+author: "Tên bạn"
+
+# Site options
+show_download: false
+logo: ""  # để trống nếu không muốn logo
+
+# Layout / navigation (có thể thêm sau)
+# full_width: true  # Minimal Mistakes hỗ trợ layout full-width bằng cách chỉnh layout / container
