@@ -14,6 +14,7 @@ title : ""
   }
 </style>
 ---
+
 # Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
 
