@@ -1,8 +1,5 @@
-# Primer theme
-remote_theme: pages-themes/primer@v0.6.0
+remote_theme: vaibhavvikas/jekyll-theme-minimalistic
 plugins:
   - jekyll-remote-theme
-
-# Chỉ định link nút View on GitHub
-github: "BTL-DSA-HK251/BTL-Extended-DSA"
-
+title: Group 3
+color-scheme: auto
