@@ -19,20 +19,26 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 ![Diagram](./assets/pineline.png "Pineline")
 ### Cấu trúc
 ![Diagram](./assets/Structure.png "Structure")
+---
 ## 📄 Report : 
 * Chi tiết cách triển khai + cơ chế được trình bày trong [report]()
+---
 
 ## 📝 Colab
 1. Đánh giá precise/recall/F1 score về 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt?usp=sharing)
 2. Đánh giá mức độ sử dụng bộ nhớ  của 3 phương pháp : [colab](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku?usp=sharing)
 3. Đánh giá, so sánh tốc độ thực thi của 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32?usp=sharing)
 
+---
 ## ⚙️ Demo 
 1. Truy cập [demo](https://huggingface.co/spaces/DatNguyen-BK/demo_deploy)
 2. Upload file `.docx`, `.txt`, hoặc `.csv`.
 3. Chọn phương pháp: **SimHash (Semantic)**, **Bloom + Faiss (Semantic)** hoặc **MinHash (Syntax)**.
 4. Submit và quan sát kết quả gộp nhóm văn bản và kết quả lọc văn bản.
 5. Tải file kết quả đã lọc văn bản `result.docx`.
+
+---
+
 ## 📌 Ghi chú
 
 * Truy cập colab/demo trực tiếp để chạy code.
