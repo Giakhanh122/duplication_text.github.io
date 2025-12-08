@@ -30,6 +30,7 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 3. Đánh giá, so sánh tốc độ thực thi của 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32?usp=sharing)
 
 ---
+
 ## ⚙️ Demo 
 1. Truy cập [demo](https://huggingface.co/spaces/DatNguyen-BK/demo_deploy)
 2. Upload file `.docx`, `.txt`, hoặc `.csv`.
@@ -37,6 +38,7 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 4. Submit và quan sát kết quả gộp nhóm văn bản và kết quả lọc văn bản.
 5. Tải file kết quả đã lọc văn bản `result.docx`.
 ---
+
 ## 📌 Ghi chú
 * Truy cập colab/demo trực tiếp để chạy code.
 * Run all trên colab
