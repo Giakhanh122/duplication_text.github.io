@@ -36,11 +36,8 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 3. Chọn phương pháp: **SimHash (Semantic)**, **Bloom + Faiss (Semantic)** hoặc **MinHash (Syntax)**.
 4. Submit và quan sát kết quả gộp nhóm văn bản và kết quả lọc văn bản.
 5. Tải file kết quả đã lọc văn bản `result.docx`.
-
 ---
-
 ## 📌 Ghi chú
-
 * Truy cập colab/demo trực tiếp để chạy code.
 * Run all trên colab
 * Thầy có thể mở lại các cell bất kỳ để kiểm tra chi tiết
