@@ -15,4 +15,5 @@ github: "BTL-DSA-HK251/BTL-Extended-DSA"
 # Just the Docs hỗ trợ layout 'default', 'home', 'minimal'
 # Dùng minimal để gọn, full-width
 just_the_docs:
-  homepage_layout: minimal
+  homepage_layout: docs
+  toc: true
