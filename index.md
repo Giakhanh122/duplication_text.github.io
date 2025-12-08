@@ -1,5 +1,20 @@
-# Duplication Text 
-
+---
+layout :default
+title : ""
+---
+<style>
+  .main-content {
+    max-width: 100% !important;
+  }
+  .page-header {
+    display: none !important;
+  }
+  body {
+    padding: 20px !important;
+  }
+</style>
+---
+# Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
 
 ---
