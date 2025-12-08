@@ -70,7 +70,6 @@ title: "Duplication Text System"
   }
 </style>
 
-<div style="width: 100%; max-width: 100%; padding: 0 5%;">
 # Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
 
@@ -117,4 +116,3 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 * Run all trên colab
 * Thầy có thể mở lại các cell bất kỳ để kiểm tra chi tiết
 
-</div>
