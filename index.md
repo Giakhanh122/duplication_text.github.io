@@ -1,5 +1,5 @@
 ---
-layout : null
+layout : page
 ---
 # 📄 Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
