@@ -1,20 +1,76 @@
 ---
-layout :default
-title : ""
----
-<style>
-  .main-content {
-    max-width: 100% !important;
-  }
-  .page-header {
-    display: none !important;
-  }
-  body {
-    padding: 20px !important;
-  }
-</style>
+layout: default
+title: "Duplication Text System"
 ---
 
+<style>
+  /* RESET HOÀN TOÀN - FORCE FULL WIDTH */
+  * {
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* QUAN TRỌNG: Reset tất cả container */
+  .main-content,
+  .container,
+  .wrapper,
+  .inner,
+  .page-header,
+  .site-footer,
+  section,
+  article,
+  div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Content area - full width với padding */
+  .main-content {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 40px 5% !important;
+    margin: 0 !important;
+  }
+  
+  /* Đảm bảo mọi phần tử con cũng full width */
+  .main-content > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Fix cho theme Cayman/Minimal */
+  .page-header {
+    padding: 2rem 5% !important;
+    width: 100vw !important;
+  }
+  
+  /* Code blocks và images full width */
+  pre, code, img {
+    max-width: 100% !important;
+    width: auto !important;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 20px 3% !important;
+    }
+  }
+</style>
+
+<div style="width: 100%; max-width: 100%; padding: 0 5%;">
 # Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
 
@@ -61,3 +117,4 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 * Run all trên colab
 * Thầy có thể mở lại các cell bất kỳ để kiểm tra chi tiết
 
+</div>

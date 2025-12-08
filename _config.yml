@@ -1,15 +1,1 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-remote-theme
-
-# Tắt title mặc định
-title: ""  # để trống
-description: ""  # để trống
-
-# Tự động sử dụng layout mặc định
-defaults:
-  -
-    scope:
-      path: ""  # áp dụng cho tất cả files
-    values:
-      layout: "default"
+theme: jekyll-theme-minimal  # Thử theme minimal.
