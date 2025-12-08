@@ -1,9 +1,6 @@
 ---
-layout: default
-title: Trang chủ
-nav_order: 1
-has_children: false
-has_toc: true
+layout: minimal
+title: Duplication Text Report
 ---
 
 # 📄 Duplication Text
