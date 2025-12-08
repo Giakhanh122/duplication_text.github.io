@@ -17,65 +17,9 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 <a name="quy-trinh-va-cau-truc-ma-nguon"></a>
 ## 🛠️ Quy trình và cấu trúc mã nguồn
 ### Pineline
-<div class="mermaid">
-graph LR
-    A[Input Documents] --> B[Preprocessing]
-    B --> C["Extract Features Shingling/Embedding"]
-    C --> D["Hashing: SimHash/MinHash/BloomFilter"]
-    D --> E["Search Similarity: LSH/Faiss"]
-    E --> F[Output Documents]
-</div>
+![Diagram](./assets/pineline.png "Pineline")
 ### Cấu trúc
-
-<div class="mermaid">
-graph TD
-    SourceCode[Source Code Structure]
-    
-    Preprocessor[Preprocessor]
-    
-    Shingling[Shingling]
-    TextEmbedder[TextEmbedder]
-    
-    IHash[IHash]
-    
-    SimHash[SimHash]
-    MinHash[MinHash]
-    BloomFilter[BloomFilter]
-    
-    ISearch[ISearch]
-    
-    LSHSearch[LSHSearch]
-    FaissSearch[FaissSearch]
-    
-    DSU[DSU]
-    VectorRecord[VectorRecord]
-    
-    SimHashDetection[SimHashDetection]
-    BloomDetection[BloomDetection]
-    MinHashDetection[MinHashDetection]
-    
-    SourceCode --> Preprocessor
-    SourceCode --> IHash
-    SourceCode --> ISearch
-    SourceCode --> DSU
-    SourceCode --> VectorRecord
-    SourceCode --> SimHashDetection
-    SourceCode --> BloomDetection
-    SourceCode --> MinHashDetection
-    
-    Preprocessor --> Shingling
-    Preprocessor --> TextEmbedder
-    
-    IHash --> SimHash
-    IHash --> MinHash
-    IHash --> BloomFilter
-    
-    ISearch --> LSHSearch
-    ISearch --> FaissSearch
-
-</div>
-
-
+![Diagram](./assets/Structure.png "Structure")
 ---
 ## 📄 Report : 
 * Chi tiết cách triển khai + cơ chế được trình bày trong [report]()
