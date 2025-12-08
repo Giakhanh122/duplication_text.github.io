@@ -1,3 +1,11 @@
+---
+layout: default
+title: Trang chủ
+nav_order: 1
+has_children: false
+has_toc: true
+---
+
 # 📄 Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
 
