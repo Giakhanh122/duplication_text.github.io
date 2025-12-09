@@ -26,7 +26,7 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 ![Diagram](./assets/Structure.png "Structure")
 ---
 ## 📄 Report : 
-* Chi tiết cách triển khai + cơ chế được trình bày trong [report]()
+* Chi tiết cách triển khai + cơ chế được trình bày trong [report](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view?usp=sharing)
 ---
 
 ## 📝 Colab
