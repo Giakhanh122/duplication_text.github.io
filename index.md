@@ -1,15 +1,13 @@
----
-layout: minimal
-title: Duplication Text Report
----
-
 # 📄 Duplication Text
 Hệ thống phát hiện văn bản trùng lặp sử dụng Hashing và Embedding hiện đại.  
 
 ---
+
 <a name="gioi-thieu"></a>
 ## 📖 Giới thiệu
 Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ liệu và Giải thuật**, nhằm phát hiện và loại bỏ các văn bản trùng lặp hoặc tương tự trong tập dữ liệu lớn (bài viết, bình luận,...).
+
+---
 
 <a name="mo-ta"></a>
 ## 🚀 Mô tả
@@ -18,15 +16,20 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 - Tìm kiếm tương đồng gần giống: **LSH**, **Faiss**
 - Giao diện trực quan bằng **Gradio**
 
+---
+
 <a name="quy-trinh-va-cau-truc-ma-nguon"></a>
 ## 🛠️ Quy trình và cấu trúc mã nguồn
 ### Pineline
 ![Diagram](./assets/pineline.png "Pineline")
 ### Cấu trúc
 ![Diagram](./assets/Structure.png "Structure")
+
 ---
+
 ## 📄 Report : 
 * Chi tiết cách triển khai + cơ chế được trình bày trong [report](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view?usp=sharing)
+
 ---
 
 ## 📝 Colab
@@ -42,6 +45,7 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 3. Chọn phương pháp: **SimHash (Semantic)**, **Bloom + Faiss (Semantic)** hoặc **MinHash (Syntax)**.
 4. Submit và quan sát kết quả gộp nhóm văn bản và kết quả lọc văn bản.
 5. Tải file kết quả đã lọc văn bản `result.docx`.
+
 ---
 
 ## 📌 Ghi chú
