@@ -19,7 +19,7 @@ just_the_docs:
   toc: true
 
 # Bật sidebar navigation
-navigation_enabled: true
+#navigation_enabled: true
 
 # Cho phép hiển thị heading trong sidebar
 aux_links:
@@ -27,7 +27,7 @@ aux_links:
 
 # Cấu hình hiển thị heading
 heading_links: true
-search_enabled: true
+#search_enabled: true
 
 # Cấu hình mức độ heading hiển thị trong TOC
 toc:
