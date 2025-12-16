@@ -38,9 +38,11 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 ---
 
 ## 📝 Colab
-1. Đánh giá precise/recall/F1 score về 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt?usp=sharing)
-2. Đánh giá mức độ sử dụng bộ nhớ  của 3 phương pháp : [colab](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku?usp=sharing)
-3. Đánh giá, so sánh tốc độ thực thi của 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32?usp=sharing)
+1. Đánh giá precise/recall/F1 score về 3 phương pháp được sử dụng :
+   - Trong phát hiện văn bản Cú pháp :[colab](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt?usp=sharing)
+   - Trong phát hiện văn bản Ngữ nghĩa : [Colab](https://colab.research.google.com/drive/1eVFntUjP9f837L_oexBRiJNE2wyIAZc4?usp=sharing)
+4. Đánh giá mức độ sử dụng bộ nhớ  của 3 phương pháp : [colab](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku?usp=sharing)
+5. Đánh giá, so sánh tốc độ thực thi của 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32?usp=sharing)
 
 ---
 
@@ -55,6 +57,6 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 
 ## 📌 Ghi chú
 * Truy cập colab/demo trực tiếp để chạy code.
-* Run all trên colab
+* Run all trên colab (Nên chạy bằng GPU để có tốc độ thực thi nhanh hơn)
 * Thầy có thể mở lại các cell bất kỳ để kiểm tra chi tiết
 
