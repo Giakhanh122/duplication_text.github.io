@@ -22,27 +22,20 @@ Dự án được xây dựng cho học phần mở rộng **Cấu trúc dữ li
 - Giao diện trực quan bằng **Gradio**
 
 ---
-
-<a name="quy-trinh-va-cau-truc-ma-nguon"></a>
-## 🛠️ Quy trình và cấu trúc mã nguồn
-### Pineline
-![Diagram](./assets/pineline.png "Pineline")
-### Cấu trúc
-![Diagram](./assets/Structure.png "Structure")
-
+## Github : [Github](https://github.com/BTL-DSA-HK251/BTL-Extended-DSA)
 ---
 
 ## 📄 Report : 
-* Chi tiết cách triển khai + cơ chế được trình bày trong [report](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view?usp=sharing)
+* Chi tiết cách triển khai + cơ chế được trình bày trong [Report](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view?usp=sharing)
 
 ---
 
 ## 📝 Colab
 1. Đánh giá precise/recall/F1 score về 3 phương pháp được sử dụng :
-   - Trong phát hiện văn bản Cú pháp :[colab](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt?usp=sharing)
+   - Trong phát hiện văn bản Cú pháp : [Colab](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt?usp=sharing)
    - Trong phát hiện văn bản Ngữ nghĩa : [Colab](https://colab.research.google.com/drive/1eVFntUjP9f837L_oexBRiJNE2wyIAZc4?usp=sharing)
-4. Đánh giá mức độ sử dụng bộ nhớ  của 3 phương pháp : [colab](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku?usp=sharing)
-5. Đánh giá, so sánh tốc độ thực thi của 3 phương pháp được sử dụng : [colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32?usp=sharing)
+4. Đánh giá mức độ sử dụng bộ nhớ  của 3 phương pháp : [Colab](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku?usp=sharing)
+5. Đánh giá, so sánh tốc độ thực thi của 3 phương pháp được sử dụng : [Colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32?usp=sharing)
 
 ---
 
