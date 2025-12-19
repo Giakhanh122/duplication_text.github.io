@@ -7,7 +7,7 @@ title: Duplication Text Report
 
 Hệ thống phát hiện văn bản trùng lặp và tương tự, kết hợp các phương pháp hashing truyền thống và embedding ngữ nghĩa hiện đại, nhằm xử lý hiệu quả tập dữ liệu văn bản quy mô lớn.
 
----
+
 
 ## 1. Introduction
 Dự án được thực hiện trong khuôn khổ học phần mở rộng **Cấu trúc dữ liệu và Giải thuật**, với mục tiêu nghiên cứu và đánh giá các phương pháp phát hiện văn bản trùng lặp dựa trên:
@@ -17,7 +17,7 @@ Dự án được thực hiện trong khuôn khổ học phần mở rộng **C�
 
 Bài toán hướng tới các ứng dụng thực tế như lọc bình luận trùng lặp, phát hiện đạo văn và tối ưu lưu trữ văn bản.
 
----
+
 
 ## 2. System Overview
 Hệ thống bao gồm các thành phần chính sau:
@@ -32,14 +32,14 @@ Hệ thống bao gồm các thành phần chính sau:
   - Faiss
 - Giao diện minh họa và thử nghiệm được triển khai bằng Gradio
 
----
+
 
 ## 3. Source Code
 Repository chứa toàn bộ mã nguồn triển khai hệ thống:
 
 👉 [github](https://github.com/BTL-DSA-HK251/BTL-Extended-DSA)
 
----
+
 
 ## 4. Experimental Setup and Evaluation
 Các thí nghiệm được thực hiện nhằm đánh giá hiệu quả của từng phương pháp theo các tiêu chí:
@@ -62,14 +62,14 @@ Toàn bộ quá trình đánh giá được triển khai và tái hiện thông 
 - So sánh thời gian thực thi giữa các phương pháp:  
   [colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32)
 
----
+
 
 ## 5. Report
 Chi tiết kiến trúc hệ thống, cơ chế thuật toán và phân tích kết quả được trình bày trong báo cáo:
 
 👉 [colab](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view)
 
----
+
 
 ## 6. Demonstration
 Hệ thống được triển khai thử nghiệm tại:
@@ -78,7 +78,7 @@ Hệ thống được triển khai thử nghiệm tại:
 
 Demo cho phép tải lên các tập tin văn bản (`.docx`, `.txt`, `.csv`) và lựa chọn phương pháp phát hiện trùng lặp để quan sát kết quả nhóm và lọc văn bản.
 
----
+
 
 ## 7. Notes on Reproducibility
 - Các notebook Colab có thể được chạy lại bằng cách sử dụng chức năng **Run all**.
