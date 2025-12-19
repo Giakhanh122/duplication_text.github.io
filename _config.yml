@@ -41,20 +41,34 @@
 #     output: true
 
 
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
+
+# title: Duplication Text
+# # description: Trang trình bày đồ án nhóm
+# author: >
+#   [Võ Văn Gia Khánh](https://github.com/Giakhanh122),
+#   [Nguyễn Tiến Đạt](https://github.com/TienDat-BK),
+#   [Nguyễn Hồng Phúc](https://github.com/brokencode197)
+
+# markdown: kramdown
+# kramdown:
+#   input: GFM
+
+
+remote_theme: just-the-docs/just-the-docs
 
 title: Duplication Text
-# description: Trang trình bày đồ án nhóm
-author: >
-  [Võ Văn Gia Khánh](https://github.com/Giakhanh122),
-  [Nguyễn Tiến Đạt](https://github.com/TienDat-BK),
-  [Nguyễn Hồng Phúc](https://github.com/brokencode197)
+description: Trang trình bày đồ án nhóm
+
+# Giao diện sáng, học thuật
+color_scheme: light
 
 markdown: kramdown
 kramdown:
   input: GFM
 
-
+# Bật tìm kiếm (rất hợp báo cáo)
+search_enabled: true
 
 
 
