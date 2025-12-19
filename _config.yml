@@ -45,6 +45,10 @@ theme: jekyll-theme-minimal
 
 title: Duplication Text
 # description: Trang trình bày đồ án nhóm
+author: >
+  [Võ Văn Gia Khánh](https://github.com/Giakhanh122),
+  [Nguyễn Tiến Đạt](https://github.com/TienDat-BK),
+  [Nguyễn Hồng Phúc](https://github.com/brokencode197)
 
 markdown: kramdown
 kramdown:
