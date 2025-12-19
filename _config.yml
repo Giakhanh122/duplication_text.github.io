@@ -1,41 +1,54 @@
-# Chỉ định theme
-remote_theme: pmarsceill/just-the-docs
+# # Chỉ định theme
+# remote_theme: pmarsceill/just-the-docs
 
-# Bật plugin remote theme
-plugins:
-  - jekyll-remote-theme
+# # Bật plugin remote theme
+# plugins:
+#   - jekyll-remote-theme
 
-# Tiêu đề site
-title: "Duplication Text Report"
+# # Tiêu đề site
+# title: "Duplication Text Report"
 
-# Nếu muốn nút View on GitHub dẫn tới repo khác
-github: "BTL-DSA-HK251/BTL-Extended-DSA"
+# # Nếu muốn nút View on GitHub dẫn tới repo khác
+# github: "BTL-DSA-HK251/BTL-Extended-DSA"
 
-# Layout mặc định cho pages
-# Just the Docs hỗ trợ layout 'default', 'home', 'minimal'
-# Dùng minimal để gọn, full-width
-just_the_docs:
-  homepage_layout: docs
-  toc: true
+# # Layout mặc định cho pages
+# # Just the Docs hỗ trợ layout 'default', 'home', 'minimal'
+# # Dùng minimal để gọn, full-width
+# just_the_docs:
+#   homepage_layout: docs
+#   toc: true
 
-# Bật sidebar navigation
-#navigation_enabled: true
+# # Bật sidebar navigation
+# #navigation_enabled: true
 
-# Cho phép hiển thị heading trong sidebar
-aux_links:
-  "Trang chủ": "index.md"
+# # Cho phép hiển thị heading trong sidebar
+# aux_links:
+#   "Trang chủ": "index.md"
 
-# Cấu hình hiển thị heading
-heading_links: true
-#search_enabled: true
+# # Cấu hình hiển thị heading
+# heading_links: true
+# #search_enabled: true
 
-# Cấu hình mức độ heading hiển thị trong TOC
-toc:
-  min_level: 2  # Hiển thị từ H2 trở lên
-  max_level: 3  # Chỉ hiển thị đến H3
+# # Cấu hình mức độ heading hiển thị trong TOC
+# toc:
+#   min_level: 2  # Hiển thị từ H2 trở lên
+#   max_level: 3  # Chỉ hiển thị đến H3
 
-# Thiết lập collections
-collections:
-  docs:
-    permalink: "/:path"
-    output: true
+# # Thiết lập collections
+# collections:
+#   docs:
+#     permalink: "/:path"
+#     output: true
+
+
+remote_theme: "jekyll/minima@1e8a445"
+
+
+
+title: Duplication Text
+# description: 
+
+
+
+
+
