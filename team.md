@@ -7,20 +7,17 @@ nav_order: 2
 
 <div class="member">
 <img src="/assets/img/khanh.jpg">
-Võ Văn Gia Khánh  
-<a href="https://github.com/Giakhanh122">GitHub</a>
+<a href="https://github.com/Giakhanh122">Võ Văn Gia Khánh</a>
 </div>
 
 <div class="member">
 <img src="/assets/img/dat.jpg">
-Nguyễn Tiến Đạt  
-<a href="https://github.com/TienDat-BK">GitHub</a>
+<a href="https://github.com/TienDat-BK">Nguyễn Tiến Đạt</a>
 </div>
 
 <div class="member">
 <img src="/assets/img/phuc.jpg">
-Nguyễn Hồng Phúc  
-<a href="https://github.com/brokencode197">GitHub</a>
+<a href="https://github.com/brokencode197">Nguyễn Hồng Phúc</a>
 </div>
 
 </div>
