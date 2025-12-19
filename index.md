@@ -4,142 +4,114 @@ title: Duplication Text Detection System
 
 # Duplication Text Detection System
 
-Hệ thống phát hiện văn bản trùng lặp và tương tự được xây dựng nhằm giải quyết bài toán so sánh và lọc văn bản trong tập dữ liệu lớn.  
-Dự án kết hợp các phương pháp hashing truyền thống với các mô hình embedding ngữ nghĩa hiện đại, cho phép đánh đổi linh hoạt giữa độ chính xác, tốc độ xử lý và chi phí bộ nhớ.
-
----
+Hệ thống phát hiện văn bản trùng lặp và tương tự, kết hợp các phương pháp hashing truyền thống với các mô hình embedding ngữ nghĩa hiện đại, nhằm xử lý hiệu quả các tập dữ liệu văn bản quy mô lớn.  
+Mục tiêu của hệ thống là đạt được sự cân bằng giữa độ chính xác, chi phí bộ nhớ và thời gian thực thi trong các bài toán phát hiện trùng lặp thực tế.
 
 ## 1. Introduction
 
-Trong bối cảnh dữ liệu văn bản ngày càng gia tăng nhanh chóng, bài toán phát hiện văn bản trùng lặp và tương tự đóng vai trò quan trọng trong nhiều ứng dụng thực tế như:
-- Phát hiện đạo văn trong giáo dục
-- Lọc nội dung trùng lặp trên mạng xã hội
-- Tối ưu hóa lưu trữ và tìm kiếm văn bản
-- Tiền xử lý dữ liệu cho các hệ thống phân tích ngôn ngữ tự nhiên
+Dự án được thực hiện trong khuôn khổ học phần mở rộng **Cấu trúc dữ liệu và Giải thuật**, với mục tiêu nghiên cứu, triển khai và đánh giá các phương pháp phát hiện văn bản trùng lặp dựa trên hai hướng tiếp cận chính:
 
-Dự án này được thực hiện trong khuôn khổ học phần mở rộng **Cấu trúc dữ liệu và Giải thuật**, với mục tiêu nghiên cứu, triển khai và đánh giá các phương pháp phát hiện trùng lặp văn bản dựa trên hai hướng tiếp cận chính:
-- Phân tích đặc trưng cú pháp (*syntax-based*)
-- Phân tích đặc trưng ngữ nghĩa (*semantic-based*)
+- Đặc trưng cú pháp (*syntax-based*)
+- Đặc trưng ngữ nghĩa (*semantic-based*)
 
-Thông qua việc kết hợp nhiều kỹ thuật khác nhau, hệ thống cho phép so sánh toàn diện hiệu quả của từng phương pháp trong các điều kiện dữ liệu và tiêu chí đánh giá khác nhau.
+Trong thực tế, nhiều văn bản có thể không hoàn toàn giống nhau về mặt cú pháp nhưng lại tương đồng về mặt ý nghĩa. Do đó, việc chỉ sử dụng các phương pháp so khớp bề mặt thường không đủ để phát hiện đầy đủ các trường hợp trùng lặp.  
+Dự án này tập trung so sánh ưu và nhược điểm của từng hướng tiếp cận, cũng như khả năng áp dụng của chúng trong các bài toán như lọc bình luận trùng lặp, phát hiện đạo văn và tối ưu hóa lưu trữ văn bản.
 
+## 2. System Overview
 
+Hệ thống được thiết kế theo mô hình pipeline, bao gồm các thành phần chính sau:
 
-## 2. Problem Definition
+- **Biểu diễn văn bản ngữ nghĩa** bằng mô hình embedding `all-MiniLM-L6-v2`, cho phép ánh xạ văn bản sang không gian vector để phục vụ so sánh ngữ nghĩa.
+- **Các phương pháp hashing** nhằm giảm chi phí lưu trữ và tăng tốc độ truy vấn:
+  - *SimHash* cho phát hiện near-duplicate
+  - *MinHash* cho so khớp cú pháp dựa trên độ tương đồng Jaccard
+  - *Bloom Filter* cho kiểm tra trùng lặp nhanh với chi phí bộ nhớ thấp
+- **Cấu trúc tìm kiếm và truy vấn tương đồng**:
+  - *Locality Sensitive Hashing (LSH)* cho tìm kiếm xấp xỉ
+  - *Faiss* cho tìm kiếm vector hiệu năng cao
+- **Giao diện minh họa và thử nghiệm**, được triển khai bằng *Gradio*, giúp người dùng dễ dàng kiểm tra hệ thống mà không cần cấu hình môi trường cục bộ
 
-Bài toán đặt ra là:  
-Cho một tập hợp các văn bản đầu vào, hệ thống cần xác định các cặp văn bản trùng lặp hoặc có mức độ tương đồng cao vượt quá một ngưỡng xác định trước.
+## 3. Source Code
 
-Các thách thức chính của bài toán bao gồm:
-- Quy mô dữ liệu lớn dẫn đến chi phí so sánh tăng cao
-- Văn bản có thể khác nhau về mặt hình thức nhưng tương đồng về mặt ngữ nghĩa
-- Cần cân bằng giữa độ chính xác, tốc độ và mức sử dụng bộ nhớ
+Toàn bộ mã nguồn triển khai hệ thống, bao gồm các module xử lý dữ liệu, hashing, embedding và đánh giá, được quản lý tại:
 
+👉 [GitHub Repository](https://github.com/BTL-DSA-HK251/BTL-Extended-DSA)
 
+Repository được tổ chức nhằm đảm bảo tính dễ đọc, dễ kiểm tra và khả năng tái hiện kết quả thực nghiệm.
 
-## 3. System Overview
+## 4. Experimental Setup and Evaluation
 
-Hệ thống được thiết kế theo mô hình pipeline gồm các bước chính:
+Các thí nghiệm được thực hiện nhằm đánh giá hiệu quả của từng phương pháp theo các tiêu chí sau:
 
-1. Tiền xử lý văn bản
-2. Biểu diễn văn bản
-3. Lập chỉ mục và tìm kiếm tương đồng
-4. Đánh giá và trực quan hóa kết quả
+- **Precision, Recall và F1-score**, phản ánh độ chính xác của việc phát hiện trùng lặp
+- **Mức độ sử dụng bộ nhớ**, đặc biệt quan trọng với các phương pháp hashing
+- **Thời gian thực thi**, ảnh hưởng trực tiếp đến khả năng mở rộng hệ thống
 
-### 3.1 Text Representation
+Toàn bộ quá trình đánh giá được triển khai và có thể tái hiện thông qua các notebook Google Colab:
 
-Hai nhóm phương pháp biểu diễn văn bản được sử dụng:
+- **Đánh giá dựa trên đặc trưng cú pháp (*syntax-based*)**  
+  [Google Colab – Syntax-based Evaluation](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt)
 
-- **Syntax-based**:
-  - SimHash
-  - MinHash
-  - Bloom Filter
+- **Đánh giá dựa trên đặc trưng ngữ nghĩa (*semantic-based*)**  
+  [Google Colab – Semantic-based Evaluation](https://colab.research.google.com/drive/1eVFntUjP9f837L_oexBRiJNE2wyIAZc4)
 
-- **Semantic-based**:
-  - Sentence Embedding sử dụng mô hình `all-MiniLM-L6-v2`
+- **Đánh giá mức độ sử dụng bộ nhớ**  
+  [Google Colab – Memory Usage Analysis](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku)
 
-### 3.2 Similarity Search
+- **So sánh thời gian thực thi giữa các phương pháp**  
+  [Google Colab – Execution Time Comparison](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32)
 
-Để tăng tốc quá trình truy vấn tương đồng, hệ thống sử dụng:
-- **Locality Sensitive Hashing (LSH)** cho các phương pháp hashing
-- **Faiss** cho tìm kiếm vector embedding trong không gian chiều cao
+## 5. Report
 
-### 3.3 User Interface
+Chi tiết kiến trúc hệ thống, cơ chế thuật toán, thiết kế thí nghiệm và phân tích kết quả thực nghiệm được trình bày trong báo cáo cuối kỳ:
 
-Một giao diện thử nghiệm được triển khai bằng **Gradio**, cho phép:
-- Tải lên các tập tin văn bản
-- Lựa chọn phương pháp phát hiện trùng lặp
-- Quan sát kết quả nhóm và lọc văn bản trực quan
+👉 [Final Project Report (PDF)](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view)
 
+## 6. Demonstration
 
+Hệ thống được triển khai thử nghiệm thông qua một demo trực tuyến tại:
 
-## 4. Source Code
+👉 [Live Demonstration](https://huggingface.co/spaces/DatNguyen-BK/demo_deploy)
 
-Toàn bộ mã nguồn của hệ thống được tổ chức và quản lý tại repository GitHub sau:
+Trang demo cho phép người dùng tải lên các tập tin văn bản (`.docx`, `.txt`, `.csv`), lựa chọn phương pháp phát hiện trùng lặp và quan sát kết quả nhóm cũng như kết quả lọc văn bản.
 
-👉 [Github](https://github.com/BTL-DSA-HK251/BTL-Extended-DSA)
+## 7. Notes on Reproducibility
 
-Repository bao gồm:
-- Mã nguồn triển khai các thuật toán
-- Notebook phục vụ thí nghiệm
-- Tài liệu hướng dẫn chạy và tái hiện kết quả
+- Các notebook Google Colab có thể được chạy lại bằng chức năng **Run all** để tái hiện toàn bộ quá trình thực nghiệm.
+- Khuyến nghị sử dụng **GPU runtime** nhằm cải thiện đáng kể tốc độ thực thi, đặc biệt với các phương pháp embedding.
+- Các cell trong notebook có thể được mở và kiểm tra chi tiết để hiểu rõ từng bước xử lý và đánh giá.
 
+## 8. Challenges and Limitations
 
+Trong quá trình thiết kế, triển khai và đánh giá hệ thống, nhóm đã gặp phải một số khó khăn và hạn chế đáng chú ý như sau.
 
-## 5. Experimental Setup and Evaluation
+### 8.1 Trade-off giữa độ chính xác và hiệu năng
 
-Các thí nghiệm được thiết kế nhằm đánh giá và so sánh hiệu quả của từng phương pháp theo các tiêu chí sau:
+Các phương pháp hashing như SimHash và MinHash có ưu điểm về tốc độ xử lý và chi phí bộ nhớ thấp. Tuy nhiên, khi ngưỡng tương đồng không được lựa chọn phù hợp, các phương pháp này có thể làm giảm độ chính xác, đặc biệt trong các trường hợp văn bản chỉ tương đồng về mặt ngữ nghĩa.
 
-- **Precision, Recall, F1-score**
-- **Mức độ sử dụng bộ nhớ**
-- **Thời gian thực thi**
+Ngược lại, các phương pháp dựa trên embedding cho kết quả chính xác hơn trong việc phát hiện văn bản tương đồng về ý nghĩa, nhưng đi kèm với chi phí tính toán cao hơn và yêu cầu nhiều tài nguyên hơn.
 
-Toàn bộ thí nghiệm được triển khai dưới dạng Google Colab notebook, đảm bảo khả năng tái hiện kết quả.
+### 8.2 Lựa chọn và điều chỉnh tham số
 
-### 5.1 Syntax-based Evaluation
-[Colab](https://colab.research.google.com/drive/1o1-CAwPNq9E4pYC2eHI5YzXxxwapfhQt)
+Việc lựa chọn các tham số như:
+- mức threshole để so sánh hiệu quả
+- số lượng hash function trong MinHash,
+- độ dài fingerprint trong SimHash,
+- kích thước Bloom Filter và tỷ lệ false positive,
+- số lượng bucket và hash function trong LSH,
 
-### 5.2 Semantic-based Evaluation
-[Colab](https://colab.research.google.com/drive/1eVFntUjP9f837L_oexBRiJNE2wyIAZc4)
+có ảnh hưởng lớn đến kết quả cuối cùng. Quá trình điều chỉnh tham số đòi hỏi nhiều lần thử nghiệm và đánh đổi giữa độ chính xác, tốc độ và bộ nhớ.
 
-### 5.3 Memory Usage Analysis
-[Colab](https://colab.research.google.com/drive/1B_XhvkkWgPJnxAY2CHhRAEjYRb2wiIku)
+### 8.3 Chi phí tính toán của embedding
 
-### 5.4 Execution Time Comparison
-[Colab](https://colab.research.google.com/drive/1J-iLNpH-PLPtxKQLlAXqLvJbCexVNV32)
+Việc sinh embedding cho tập dữ liệu lớn tiêu tốn đáng kể thời gian và tài nguyên, đặc biệt khi không sử dụng GPU.  
+Trong một số thí nghiệm, thời gian tạo embedding chiếm phần lớn tổng thời gian thực thi của hệ thống.
 
+### 8.4 Hạn chế của dữ liệu và đánh giá
 
+Do giới hạn về thời gian và tài nguyên, tập dữ liệu sử dụng trong các thí nghiệm chưa thể bao phủ đầy đủ mọi loại văn bản trong thực tế.  
+Điều này có thể ảnh hưởng đến khả năng tổng quát hóa kết quả khi áp dụng hệ thống cho các tập dữ liệu có đặc điểm khác biệt.
 
-## 6. Report
+### 8.5 Khả năng mở rộng hệ thống
 
-Báo cáo chi tiết trình bày:
-- Kiến trúc tổng thể của hệ thống
-- Phân tích cơ chế hoạt động của từng thuật toán
-- Đánh giá và so sánh kết quả thực nghiệm
-
-👉 [Report](https://drive.google.com/file/d/1zQ7Wyf5HfboOBgLL1bE9udIcNqWbwo4w/view)
-
-
-
-## 7. Demonstration
-
-Hệ thống được triển khai thử nghiệm tại:
-
-👉 [Demo](https://huggingface.co/spaces/DatNguyen-BK/demo_deploy)
-
-Trang demo cho phép người dùng tải lên các tập tin văn bản (`.docx`, `.txt`, `.csv`) và lựa chọn phương pháp phát hiện trùng lặp để quan sát kết quả xử lý.
-
-
-
-## 8. Notes on Reproducibility
-
-- Các notebook Colab có thể được chạy lại bằng chức năng **Run all**
-- Khuyến nghị sử dụng GPU để cải thiện tốc độ thực thi
-- Các cell có thể được mở và kiểm tra chi tiết từng bước xử lý
-
-
-
-## 9. Conclusion
-
-Trang GitHub Pages này cung cấp cái nhìn tổng quan về hệ thống phát hiện văn bản trùng lặp được xây dựng trong khuôn khổ học phần.  
-Thông qua việc kết hợp các phương pháp hashing và embedding, dự án cho thấy sự đánh đổi rõ ràng giữa độ chính xác, hiệu năng và chi phí tài nguyên, đồng thời mở ra hướng mở rộng cho các nghiên cứu và ứng dụng thực tế trong tương lai.
+Mặc dù hệ thống hoạt động hiệu quả với tập dữ liệu ở quy mô vừa, việc mở rộng lên quy mô rất lớn (hàng triệu văn bản) đặt ra các thách thức về quản lý bộ nhớ, thời gian xử lý và kiến trúc lưu trữ, đặc biệt với các phương pháp embedding và tìm kiếm vector.
