@@ -41,12 +41,14 @@
 #     output: true
 
 
-remote_theme: "jekyll/minima@1e8a445"
-
-
+theme: jekyll-theme-minimal
 
 title: Duplication Text
-# description: 
+# description: Trang trình bày đồ án nhóm
+
+markdown: kramdown
+kramdown:
+  input: GFM
 
 
 
