@@ -53,7 +53,9 @@
 # markdown: kramdown
 # kramdown:
 #   input: GFM
-
+sass:
+  sass_dir: assets/css        # Thư mục chứa SCSS partials (nếu có)
+  style: compressed      # Nén CSS (tùy chọn)
 
 remote_theme: just-the-docs/just-the-docs
 
@@ -69,7 +71,4 @@ kramdown:
 
 # Bật tìm kiếm (rất hợp báo cáo)
 search_enabled: true
-
-sass:
-  sass_dir: assets/css
 
