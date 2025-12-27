@@ -57,7 +57,7 @@ sass:
   sass_dir: assets/css        # Thư mục chứa SCSS partials (nếu có)
   style: compressed      # Nén CSS (tùy chọn)
 
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 
 title: Duplication Text
 description: Trang trình bày đồ án nhóm
