@@ -70,5 +70,6 @@ kramdown:
 # Bật tìm kiếm (rất hợp báo cáo)
 search_enabled: true
 
-
+sass:
+  sass_dir: assets/css
 
