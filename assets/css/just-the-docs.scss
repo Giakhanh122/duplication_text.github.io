@@ -1,4 +1,16 @@
 ---
 ---
 
-@import "custom";
+.member {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.member .avatar {
+  width: 31px;
+  height: 31px;
+  border-radius: 49%;
+  object-fit: cover;
+  border: 0px solid #d0d7de;
+}
