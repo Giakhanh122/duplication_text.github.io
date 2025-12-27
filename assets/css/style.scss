@@ -92,17 +92,31 @@
 
 .team {
   display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .member {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
+  border-radius: 50%;      
+  border: 2px solid #ddd; 
 }
+
+.member a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.member a:hover {
+  text-decoration: underline;
+}
+
